@@ -1,17 +1,26 @@
 {
   "manifest_version": 2,
-
-  "name": "Getting started example",
-  "description": "This extension shows a Google Image search result for the current page",
-  "version": "1.0",
-
+  "name": "Send selection to Google Maps",
+  "description": "This extension opens a selection directly on Google Maps",
+  "version": "0.1",
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html",
-    "default_title": "Heeeyy"
+    "default_icon": "send-to-maps-16.png",
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js",
+      "utils.js"
+    ]
   },
   "permissions": [
-    "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+    "alarms",
+    "storage",
+    "contextMenus",
+    "activeTab"
+  ],
+  "options_page": "options.html",
+  "icons": {
+    "16": "send-to-maps-16.png"
+  }
 }
