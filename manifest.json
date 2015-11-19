@@ -10,6 +10,9 @@
       "events.js"
     ]
   },
+  "browser_action": {
+    "default_icon": "send-to-maps-squared.png"
+  },
   "permissions": [
     "alarms",
     "storage",
